@@ -47,7 +47,7 @@
 
     <section id="contacto">
       <h2>Contacto</h2>
-      <form action="#" method="POST">
+      <form id="form-contacto">
         <div>
           <label for="nombre">Nombre completo:</label>
           <input type="text" id="nombre" name="nombre" required>
@@ -60,14 +60,48 @@
           <label for="mensaje">Mensaje:</label>
           <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
         </div>
-        
-        <!-- Botón Neon Glow dentro del formulario -->
+
         <div>
-          <button type="submit" class="button">Neon Glow</button>
+          <button type="submit" class="button">Enviar Mensaje</button>
         </div>
       </form>
+
+      <!-- Área para mostrar los mensajes enviados -->
+      <div id="contenedor-mensajes">
+        <h3>Mensajes Recibidos</h3>
+        <div id="lista-mensajes">
+          <p class="sin-mensajes">Aún no has enviado mensajes.</p>
+        </div>
+      </div>
     </section>
   </main>
+
+  <!-- Script para capturar el envío del formulario -->
+  <script>
+    const form = document.getElementById('form-contacto');
+    const listaMensajes = document.getElementById('lista-mensajes');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita que la página se recargue
+
+      const nombre = document.getElementById('nombre').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      // Quitar mensaje por defecto si existe
+      const sinMensajes = document.querySelector('.sin-mensajes');
+      if (sinMensajes) sinMensajes.remove();
+
+      // Crear tarjeta con el mensaje enviado
+      const nuevoMensaje = document.createElement('div');
+      nuevoMensaje.classList.add('tarjeta-mensaje');
+      nuevoMensaje.innerHTML = `<strong>${nombre}:</strong> <p>${mensaje}</p>`;
+
+      listaMensajes.appendChild(nuevoMensaje);
+
+      // Limpiar campos del formulario
+      form.reset();
+    });
+  </script>
 
   <footer aria-label="Pie de página">
     <nav aria-label="Navegación de pie de página">

@@ -155,3 +155,41 @@ input:focus, textarea:focus {
     font-size: 28px;
   }
 }
+
+/* --- Estilos para la sección de Mensajes Enviados --- */
+#contenedor-mensajes {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #16162a;
+  border: 1px solid #ff00de;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 0, 222, 0.2);
+}
+
+#contenedor-mensajes h3 {
+  color: #00ffff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.sin-mensajes {
+  color: #888;
+  font-style: italic;
+}
+
+.tarjeta-mensaje {
+  background: #1a1a38;
+  border-left: 4px solid #00ffff;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.tarjeta-mensaje strong {
+  color: #ff00de;
+}
+
+.tarjeta-mensaje p {
+  color: #ffffff;
+  margin-top: 5px;
+}
