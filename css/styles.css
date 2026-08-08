@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #ffffff;
-  background-color: #0d0d1a; /* Fondo oscuro para resaltar el efecto neón */
+  background-color: #0d0d1a;
   padding: 20px;
 }
 
@@ -60,7 +60,7 @@ h1, h2, h3 {
 /* --- Layout Flexbox Responsivo --- */
 .contenedor-flex {
   display: flex;
-  flex-direction: column; /* 1 Columna en móviles */
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -71,15 +71,14 @@ article {
   border-radius: 6px;
 }
 
-/* Breakpoint para pantallas de escritorio (3 Columnas) */
 @media (min-width: 768px) {
   .contenedor-flex {
-    flex-direction: row; /* Pasa a Fila */
+    flex-direction: row;
     justify-content: space-between;
   }
 
   .contenedor-flex article {
-    flex: 1; /* Distribución equitativa en 3 columnas */
+    flex: 1;
   }
 }
 
@@ -149,14 +148,13 @@ input:focus, textarea:focus {
                0 0 100px #00ffff;
 }
 
-/* Ajuste móvil para que el texto neón no desborde */
 @media (max-width: 600px) {
   .button {
     font-size: 28px;
   }
 }
 
-/* --- Estilos para la sección de Mensajes Enviados --- */
+/* --- Sección Mensajes Enviados --- */
 #contenedor-mensajes {
   margin-top: 30px;
   padding: 20px;
