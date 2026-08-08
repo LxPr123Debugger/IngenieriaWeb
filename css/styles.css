@@ -57,7 +57,7 @@ h1, h2, h3 {
   color: #ff00de;
 }
 
-/* --- Layout Flexbox Responsivo (Requisito de la Guía) --- */
+/* --- Layout Flexbox Responsivo --- */
 .contenedor-flex {
   display: flex;
   flex-direction: column; /* 1 Columna en móviles */
